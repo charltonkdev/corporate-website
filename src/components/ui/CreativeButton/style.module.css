@@ -1,0 +1,18 @@
+
+.btnAnimate::after {
+    content:'';
+    width: 350px;
+    height: 350px;
+    background: #000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 60%;
+    transform: rotate(45deg);
+    z-index: 0;
+    transition: 0.8s ease-in-out
+}
+.btnAnimate:hover:after {
+    right: -10vh;
+    scale: 2;
+}
