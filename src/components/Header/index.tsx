@@ -3,6 +3,12 @@ import { useState } from "react";
 import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi";
 import style from "./style.module.css";
 import  CreativeButton  from "@/components/ui/CreativeButton";
+import { clsx } from "clsx";
+import { DM_Sans } from "next/font/google";
+
+const dmSans = DM_Sans({
+    subsets: ["latin"],
+  });
 
 export const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,13 +18,13 @@ export const Header = () => {
     };
 
     return (
-        <header className="relative flex justify-between items-center container py-7 -mb-24 mx-auto px-6 md:px-0 z-50">
+        <header className="relative flex justify-between items-center container py-7 -mb-28 md:-mb-24 mx-auto px-6 md:px-6 lg:px-0 z-50">
             <div className="flex font-bold text-2xl uppercase">Consul</div>
             <div className="hidden md:flex">
-                <ul className="flex w-full gap-8 font-semibold uppercase">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Services</li>
+                <ul className={clsx(dmSans.className ,style.menuLink, "flex w-full gap-8 uppercase text-sm")}>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">About Us</a></li>
+                    <li><a href="#home">Services</a></li>
                 </ul>
             </div>
             <div className="hidden md:flex relative">
@@ -31,31 +37,20 @@ export const Header = () => {
                 className="md:hidden flex items-center text-3xl z-50 bg-blue-600 p-3 rounded-full"
                 onClick={toggleMenu}
             >
-                {menuOpen ? <FiX /> : <FiMenu />}
+                {menuOpen ? <FiX className="text-white"/> : <FiMenu className="text-white"/>}
             </button>
 
             <div className={`${menuOpen ? "translate-x-0" : "translate-x-full"} md:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg transition-transform duration-300 ease-in-out z-40 flex flex-col justify-between px-12`}>
-                <ul className="flex flex-col text-left gap-12 font-semibold uppercase mt-20 text-3xl text-black">
+                <ul className={clsx(dmSans.className ,style.menuLink, "flex flex-col justify-center h-full text-left gap-12 font-semibold uppercase mt-20 text-3xl text-black")}>
                     {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-                    <li onClick={toggleMenu}>Home</li>
+                    <li onClick={toggleMenu}><a href="#home">Home</a></li>
                     {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-                    <li onClick={toggleMenu}>About Us</li>
+                    <li onClick={toggleMenu}><a href="#about-us">About Us</a></li>
                     {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-                    <li onClick={toggleMenu}>Home</li>
-                    {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-                    <li onClick={toggleMenu}>Services</li>
+                    <li onClick={toggleMenu}><a href="#services">Services</a></li>
                 </ul>
                 <div className="flex relative mb-20">
-                    <button
-                        type="button"
-                        className={`${style.btnAnimate} px-5 py-2 rounded-full uppercase font-semibold flex relative z-30 bg-blue-600 overflow-hidden group/btnA`}>
-                        <span className="z-20 flex gap-2 group-hover/btnA:text-black duration-500">
-                            Contact Us
-                            <FiArrowUpRight
-                                className="text-2xl"
-                            />
-                        </span>
-                    </button>
+                    <CreativeButton>Contact Us</CreativeButton>
                 </div>
             </div>
         </header>

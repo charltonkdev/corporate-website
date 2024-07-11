@@ -15,3 +15,28 @@
 .btnAnimate:hover:after {
     right: -10vh;
 }
+
+.menuLink li {
+    overflow: hidden;
+    width: fit-content;
+}
+.menuLink a{
+    transition: .5s ease-in-out;
+}
+.menuLink a:hover {
+    @apply text-blue-600;
+}
+
+.menuLink a::after {
+    content: '';
+    position: relative;
+    display: block;
+    height: 2px;
+    transform: translateX(-100%);
+    transition: .3s ease-in-out;
+    @apply bg-blue-600 w-full;
+}
+
+.menuLink a:hover:after {
+    transform: translateX(0);
+}
