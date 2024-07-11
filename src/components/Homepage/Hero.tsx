@@ -24,10 +24,10 @@ export default function Hero() {
         <section id="home" className="flex w-full h-screen md:h-[90vh] items-center relative py-12 md:py-0">
             <div className='relative container h-full flex flex-col-reverse md:flex-row items-center w-full z-30'>
                 <div className="flex flex-col z-20">
-                    <h1 ref={titleRef} className="text-4xl md:text-5xl lg:text-7xl font-semibold md:max-w-lg lg:max-w-3xl mb-5 text-slate-800">
+                    <h1 ref={titleRef} className="text-4xl lg:text-7xl font-semibold md:max-w-lg lg:max-w-3xl mb-5">
                         Your Personal Business Consultant
                     </h1>
-                    <p ref={textRef} className="text-xl w-full md:max-w-lg leading-relaxed mb-12">
+                    <p ref={textRef} className="text-xl w-full md:max-w-lg leading-relaxed mb-6">
                         By doing a business analysis of these statements, you can see whether you have enough business capital.
                     </p>
                     <div className="flex md:flex-col lg:flex-row relative gap-6 items-center md:items-start lg:items-center">

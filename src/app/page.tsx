@@ -1,3 +1,4 @@
+import About from "@/components/Homepage/About";
 import Hero from "@/components/Homepage/Hero";
 import MovingText from "@/components/ui/MovingText";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen w-full flex-col items-center justify-between mx-auto overflow-hidden">
       <Hero />
       <MovingText />
+      <About />
     </main>
   );
 }
