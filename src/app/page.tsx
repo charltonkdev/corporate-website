@@ -1,6 +1,7 @@
 import About from "@/components/Homepage/About";
 import Hero from "@/components/Homepage/Hero";
 import MovingText from "@/components/ui/MovingText";
+import Services from "@/components/Homepage/Services"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <MovingText />
       <About />
+      <Services />
     </main>
   );
 }

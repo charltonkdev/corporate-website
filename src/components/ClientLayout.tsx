@@ -4,6 +4,7 @@
 import { IBM_Plex_Sans } from "next/font/google";
 import { Header } from "@/components/Header/";
 import { GsapProvider } from "@/lib/utils/GsapContext";
+import Footer from "./Footer";
 
 const plex_sans = IBM_Plex_Sans({
   subsets: ["cyrillic", "cyrillic-ext", "greek", "latin"],
@@ -22,6 +23,7 @@ export default function ClientLayout({
       <GsapProvider>
         {children}
       </GsapProvider>
+      <Footer />
     </div>
   );
 }

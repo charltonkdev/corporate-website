@@ -21,7 +21,7 @@ export default function Hero() {
 
     return (
 
-        <section id="home" className="flex w-full h-screen md:h-[90vh] items-center relative py-12 md:py-0">
+        <section id="home" className="flex w-full h-full md:h-[90vh] items-center relative py-12 md:py-0">
             <div className='relative container h-full flex flex-col-reverse md:flex-row items-center w-full z-30'>
                 <div className="flex flex-col z-20">
                     <h1 ref={titleRef} className="text-4xl lg:text-7xl font-semibold md:max-w-lg lg:max-w-3xl mb-5">
@@ -40,13 +40,13 @@ export default function Hero() {
                         <span ref={spanRef} className="text-sm">+10k Clients</span>
                     </div>
                 </div>
-                <div ref={imgRef} className="relative md:absolute right-0 bottom-0 flex flex-col h-fit w-fit z-10 mb-6 md:-mb-4">
+                <div ref={imgRef} className="relative md:absolute md:right-32 md:-bottom-12 flex flex-col h-fit md:h-auto w-fite md:w-[40%] z-10 mb-6 md:-mb-4">
                     <Image
                         alt=""
                         src="/hero.png"
+                        className='block'
                         width={657}
                         height={804}
-                        className=''
                     />
                 </div>
             </div>

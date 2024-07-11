@@ -22,7 +22,7 @@ export default function About() {
             <div className="flex flex-col md:flex-row items-end gap-12 pb-6 justify-evenly">
                 <div className="flex flex-col gap-4 w-full md:w-[50%]">
                     <span className="flex gap-3 items-center text-blue-600 uppercase font-semibold">
-                        <FaRegCircleDot /> Whoe We Are
+                        <FaRegCircleDot /> Who We Are
                     </span>
                     <h2 ref={titleRef} className="text-4xl lg:text-5xl font-bold w-full">
                         How We Work on Solving All Business Issues
