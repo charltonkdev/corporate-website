@@ -62,3 +62,45 @@ export const services = [
         src: "/home/s4.jpg"
     },
 ]
+
+export const companyList = [
+    {
+        id: 10,
+        src: "/home/c1.svg",
+    },
+    {
+        id: 11,
+        src: "/home/c2.svg",
+    },
+    {
+        id: 12,
+        src: "/home/c3.svg",
+    },
+    {
+        id: 13,
+        src: "/home/c4.svg",
+    },
+]
+
+export const faqs = [
+    {
+      id: 14,
+      question: "01. What services do business consultants provide?",
+      answer: "Business consultants offer a wide range of services including strategic planning, process optimization, financial advisory, marketing strategy, and operational improvement."
+    },
+    {
+      id: 15,
+      question: "02. How can a business consultant help my company?",
+      answer: "A business consultant can provide expert advice to identify challenges, recommend solutions, and help implement strategies to improve business performance, efficiency, and profitability."
+    },
+    {
+      id: 16,
+      question: "03. What should I look for in a business consultant?",
+      answer: "Look for experience, expertise in your industry, a proven track record, good communication skills, and the ability to understand and align with your business goals."
+    },
+    {
+      id: 17,
+      question: "04. How do I get started with a business consultant?",
+      answer: "You can start by identifying the specific areas where you need help, researching potential consultants, scheduling consultations to discuss your needs, and then selecting the consultant that best fits your requirements."
+    }
+  ];

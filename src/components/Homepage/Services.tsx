@@ -2,6 +2,7 @@ import Image from "next/image";
 import { services } from "@/data";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaRegCircleDot } from "react-icons/fa6";
+import Company from "./Company";
 
 export default function Services() {
     return (
@@ -38,6 +39,7 @@ export default function Services() {
                 ))}
 
             </div>
+            <Company />
         </section>
     )
 }

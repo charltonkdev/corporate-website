@@ -18,7 +18,7 @@ export default function About() {
     useGsapFadeInUp(refs, 0.2);
 
     return (
-        <section id="about" className="relative container flex flex-col w-full h-full items-center py-24 gap-6">
+        <section id="about-us" className="relative container flex flex-col w-full h-full items-center py-24 gap-6">
             <div className="flex flex-col md:flex-row items-end gap-12 pb-6 justify-evenly">
                 <div className="flex flex-col gap-4 w-full md:w-[50%]">
                     <span className="flex gap-3 items-center text-blue-600 uppercase font-semibold">
@@ -73,7 +73,7 @@ export default function About() {
             </div>
 
             <div className="flex relative flex-col-reverse md:flex-row gap-24 pb-6 h-full md:h-screen items-center md:justify-center py-24">
-                <div className="flex flex-col h-[30vh] md:h-fit w-full md:w-fit rounded-3xl overflow-hidden">
+                <div className="flex flex-col h-[calc(60vw)] md:h-fit w-fit md:w-fit rounded-3xl overflow-hidden">
                     <Image
                         alt="joinbg"
                         src="/home/whyus.webp"
@@ -81,7 +81,7 @@ export default function About() {
                         height={692}
                         className='z-10'
                     />
-                    <div className="hidden md:flex bg-blue-600 rounded-3xl w-[50vw] h-full absolute -left-[35%]  top-0" />
+                    <div className="hidden md:flex bg-blue-600 rounded-3xl w-[70vw] lg:w-[50vw] h-full absolute -left-[20vw] lg:-left-[35vw] top-0" />
                 </div>
                 <div className="flex flex-col gap-4 w-full  justify-center md:w-[50%]">
                     <span className="flex gap-3 items-center text-blue-600 uppercase font-semibold">

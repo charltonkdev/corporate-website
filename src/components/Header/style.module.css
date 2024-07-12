@@ -27,6 +27,24 @@
     @apply text-blue-600;
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+.transition-transform {
+    transition: transform 0.3s ease-in-out;
+}
+
+.translate-y-0 {
+    transform: translateY(0);
+}
+
+.-translate-y-full {
+    transform: translateY(-100%);
+}
 .menuLink a::after {
     content: '';
     position: relative;
