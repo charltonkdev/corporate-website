@@ -5,6 +5,7 @@ import style from "./style.module.css";
 import CreativeButton from "@/components/ui/CreativeButton";
 import { clsx } from "clsx";
 import { DM_Sans } from "next/font/google";
+import Link from "next/link";
 
 const dmSans = DM_Sans({
     subsets: ["latin"],
@@ -37,6 +38,7 @@ export const Header = () => {
         setIsMdScreen(window.innerWidth >= 768);
     };
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', controlHeader);
@@ -63,10 +65,10 @@ export const Header = () => {
                 <div className="flex font-bold text-2xl uppercase">Consul</div>
                 <div className="hidden md:flex">
                     <ul className={clsx(dmSans.className, style.menuLink, "flex w-full gap-8 uppercase text-sm")}>
-                        <li><a href="#home" onClick={() => handleMenuClick('home')}>Home</a></li>
-                        <li><a href="#about-us" onClick={() => handleMenuClick('about-us')}>About Us</a></li>
-                        <li><a href="#services" onClick={() => handleMenuClick('services')}>Services</a></li>
-                        <li><a href="#faq" onClick={() => handleMenuClick('faq')}>Faq</a></li>
+                        <li><Link href="#home" onClick={() => handleMenuClick('home')}>Home</Link></li>
+                        <li><Link href="#about-us" onClick={() => handleMenuClick('about-us')}>About Us</Link></li>
+                        <li><Link href="#services" onClick={() => handleMenuClick('services')}>Services</Link></li>
+                        <li><Link href="#faq" onClick={() => handleMenuClick('faq')}>Faq</Link></li>
                     </ul>
                 </div>
                 <div className="hidden md:flex relative">
@@ -76,7 +78,7 @@ export const Header = () => {
                 </div>
                 <button
                     type="button"
-                    className="md:hidden fixed z-50 right-0 flex items-center text-3xl bg-blue-600 p-3 rounded-full"
+                    className="md:hidden fixed z-50 right-3 flex items-center text-3xl bg-blue-600 p-3 rounded-full"
                     onClick={toggleMenu}
                 >
                     {menuOpen ? <FiX className="text-white" /> : <FiMenu className="text-white" />}
@@ -84,10 +86,10 @@ export const Header = () => {
 
                 <div className={`${menuOpen ? "translate-x-0" : "translate-x-full"} md:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg transition-transform duration-300 ease-in-out z-40 flex flex-col justify-between px-12`}>
                     <ul className={clsx(dmSans.className, style.menuLink, "flex flex-col justify-center h-full text-left gap-12 font-semibold uppercase mt-20 text-3xl text-black cursor-pointer")}>
-                        <li onClick={() => handleMenuClick('home')}>Home</li>
-                        <li onClick={() => handleMenuClick('about-us')}>About Us</li>
-                        <li onClick={() => handleMenuClick('services')}>Services</li>
-                        <li onClick={() => handleMenuClick('faq')}>Faq</li>
+                        <li><Link href="#home" onClick={() => handleMenuClick('home')}>Home</Link></li>
+                        <li><Link href="#about-us" onClick={() => handleMenuClick('about-us')}>About Us</Link></li>
+                        <li><Link href="#services" onClick={() => handleMenuClick('services')}>Services</Link></li>
+                        <li><Link href="#faq" onClick={() => handleMenuClick('faq')}>Faq</Link></li>
                     </ul>
                     <div className="flex relative mb-20">
                         <CreativeButton>Contact Us</CreativeButton>
